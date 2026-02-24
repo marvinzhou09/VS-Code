@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Weather Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="card">
+        <p class="kicker">World Weather</p>
+        <h1>Global Weather Studio</h1>
+        <p class="subhead">Pick a city and view the current weather in Celsius or Fahrenheit.</p>
+
+        <div class="controls">
+          <label for="citySelect">City</label>
+          <select id="citySelect" aria-label="Select city"></select>
+
+          <label for="unitSelect">Temperature Unit</label>
+          <select id="unitSelect" aria-label="Select temperature unit">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+          </select>
+        </div>
+
+        <button id="loadWeatherBtn" type="button">Show Weather</button>
+
+        <section id="weatherPanel" class="weather-panel" aria-live="polite">
+          <p class="hint">Select a city and click “Show Weather”.</p>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
